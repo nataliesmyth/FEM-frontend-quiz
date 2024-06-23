@@ -1,0 +1,196 @@
+@font-face {
+    font-family: "Rubik-VariableFont";
+    src: url('./assets/fonts/Rubik-VariableFont_wght.ttf');
+    src: url('./assets/fonts/Rubik-Italic-VariableFont_wght.ttf');
+    font-weight: 100 1000;
+}
+
+:root {
+    /* colors */
+    --clr-accent: 277 91 56;
+    --clr-dark-navy: 216 25 25;
+    --clr-navy: 216 27 32;
+    --clr-light-navy: 219 13 44;
+    --clr-light-blue: 216 47 78;
+    --clr-light-grey: 220 38 97;
+    --clr-white: 0 0 100;
+    --clr-green: 151 70 50;
+    --clr-red: 0 82 63;
+
+    /* font-size */
+    --fs-200: 1rem;
+    --fs-300: 1.25rem;
+    --fs-400: 1.5rem;
+    --fs-500: 1.75rem;
+    --fs-600: 2rem;
+    --fs-700: 4rem;
+    --fs-800: 9rem;
+
+    /* font-weight */
+    --fw-100: 100;
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: hsl( var(--clr-dark-navy) );
+}
+
+body {
+    margin: .5em 1em;
+    font-family: 'Rubik';
+    color: hsl( var(--clr-dark-navy) );
+}
+
+/* utility classes */
+/* REMEMBER: utility classes do one thing, and do that thing really well. */
+/* utility classes literally have ONE JOB */
+
+/***** BENEFITS *****/
+/* easier to plug and play */
+/* classes enable us to write more semantic HTML */
+.text-dark-navy { color: hsl( var(--clr-dark-navy) ); }
+.text-navy { color: hsl( var(--clr-navy) ); }
+.text-light-navy { color: hsl( var(--clr-light-navy) ); }
+
+.bg-accent { background-color: hsl( var(--clr-accent) ); }
+.bg-dark-navy { background-color: hsl( var(--clr-dark-navy) ); }
+.bg-navy { background-color: hsl( var(--clr-navy) ); }
+.bg-light-navy { background-color: hsl( var(--clr-light-navy) ); }
+.bg-light-blue { background-color: hsl( var(--clr-light-blue) ); }
+.bg-light-grey { background-color: hsl( var(--clr-light-grey) ); }
+.bg-white { background-color: hsl( var(--clr-white) ); }
+.bg-green { background-color: hsl( var(--clr-green) ); }
+.bg-red { background-color: hsl( var(--clr-red) ); }
+
+.fs-200 { font-size: var(--fs-200); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-800 { font-size: var(--fs-800); }
+
+.fw-200 { font-weight: var(--fw-200); }
+.fw-300 { font-weight: var(--fw-300); }
+.fw-400 { font-weight: var(--fw-400); }
+.fw-500 { font-weight: var(--fw-500); }
+.fw-600 { font-weight: var(--fw-600); }
+.fw-700 { font-weight: var(--fw-700); }
+.fw-800 { font-weight: var(--fw-800); }
+
+.border-light-blue { border: 1px solid hsl( var(--clr-light-blue) ); }
+
+.uppercase { text-transform: uppercase; }
+.flex { display: flex; }
+
+.color {
+    border-radius: 10px;
+}
+
+#colors {
+    flex-wrap: wrap;
+}
+
+.title {
+    padding-block: 1em;
+    width: 100%;
+}
+
+.line {
+    width: 100%;
+    height: 0.75px;
+    background-color: hsl( var(--clr-light-blue) / .5);
+}
+
+.button {
+    margin-block: .75em;
+    padding-block: 1em;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl( var(--clr-accent) );
+    color: hsl( var(--clr-white) );
+}
+
+.button:hover {
+    background-color: hsl( var(--clr-accent) / .5 );
+}
+
+.selection-el {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-weight: var(--fw-400);
+    margin-block: 1em;
+    padding: .5em;
+    background-color: hsl( var(--clr-white) );
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px hsl( var(--clr-light-blue) / .5);
+}
+
+.selection-el > .left {
+    align-items: center;
+    gap: 20px;
+}
+
+.selection-el:hover .rectangle {
+    background-color: hsl( var(--clr-accent) / .05 );
+    color:hsl( var(--clr-accent) );
+}
+
+.rectangle {
+    padding: .25em .5em;
+    background-color: hsl( var(--clr-light-grey) );
+    color: hsl( var(--clr-navy) );
+    font-size: var(--fs-400);
+    border-radius: 10px;
+}
+
+.active {
+    border: 2px solid hsl( var(--clr-accent) );
+}
+
+.active > .rectangle {
+    background-color: hsl( var(--clr-accent) );
+    color: hsl( var(--clr-white) );
+}
+
+.correct-pick {
+    border: 2px solid hsl( var(--clr-green) );
+}
+
+.correct-pick > .rectangle {
+    background-color: hsl( var(--clr-green) );
+    color: hsl( var(--clr-white) );
+}
+
+.incorrect-pick {
+    border: 2px solid hsl( var(--clr-red) );
+}
+
+.incorrect-pick > .rectangle {
+    background-color: hsl( var(--clr-red) );
+    color:hsl( var(--clr-white) );
+}
